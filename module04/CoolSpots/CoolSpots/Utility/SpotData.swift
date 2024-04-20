@@ -26,7 +26,11 @@ class SpotData {
     ]
     
     func next() -> Spot {
-        let randomNumber = Int.random(in: 1...items.count)
+        var randomNumber: Int = 1
+        repeat {
+            randomNumber = Int.random(in: 1...items.count)
+        } while randomNumber == current.ordinal
+        
         current = items[randomNumber-1]
         
         return current
