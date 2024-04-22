@@ -20,7 +20,8 @@ struct CardView: View {
         let username = "Pluralsight User"
         Logger.viewCycle.info("Welcome \(username)")
         
-        spotItem = spotData.next()
+        let newItem = spotData.next()
+        spotItem = newItem
     }
     
     var body: some View {
