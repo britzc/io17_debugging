@@ -1,42 +1,55 @@
 
 import Foundation
 
+class Country {
+    var name: String
+    var spot: Spot?
+    
+    init(name:String,spot: Spot? = nil) {
+        self.name = name
+        self.spot = spot
+    }
+}
+
 class Spot {
     var ordinal: Int
     var image: String
     var description: String
+    var country: Country?
     
-    init(ordinal:Int,image:String, description:String){
+    init(ordinal:Int,image:String, description:String, country: Country? = nil){
         self.ordinal = ordinal
         self.image = image
         self.description = description
+        self.country = country
     }
 }
 
 class SpotData {
-    private var current: Spot
+    private var currentOrdinal: Int
     
-    private var items = [
-        Spot(ordinal:1,image:"milfordsound",description:"Milford Sound, New Zealand"),
-        Spot(ordinal:2,image:"sydneyharbourbridge",description:"Sydney Harbour Bridge, Australia"),
-        Spot(ordinal:3,image:"grandcanyon",description:"Grand Canyon, America"),
-        Spot(ordinal:4,image:"machupicchu",description:"Machu Picchu, Peru"),
-        Spot(ordinal:5,image:"moremi",description:"Moremi, Botswana"),
-        Spot(ordinal:6,image:"eiffeltower",description:"Eiffel Tower, France")
-    ]
+    private var images = ["milfordsound", "sydneyharbourbridge", "grandcanyon", "machupicchu", "moremi", "eiffeltower"]
+    private var descriptions = ["Milford Sound", "Sydney Harbour Bridge", "Grand Canyon", "Machu Picchu", "Moremi", "Botswana"]
+    private var countries = ["New Zealand", "Australia", "America", "Peru", "Botswana", "France"]
     
-    func next() -> Spot {
-        var randomNumber: Int = 1
+    func next() -> Spot? {
+        var randomNumber: Int = 0
         repeat {
-            randomNumber = Int.random(in: 1...items.count)
-        } while randomNumber == current.ordinal
+            randomNumber = Int.random(in: 0...images.count-1)
+        } while randomNumber == currentOrdinal
         
-        current = items[randomNumber-1]
+        currentOrdinal = randomNumber
         
-        return current
+        let country: Country? = Country(name:countries[currentOrdinal])
+        
+        let spot: Spot? = Spot(ordinal:currentOrdinal + 1,image:images[currentOrdinal],description:descriptions[currentOrdinal],country: country)
+        
+        country?.spot = spot
+        
+        return spot
     }
     
     init() {
-        current = items[0]
+        currentOrdinal = 1
     }
 }

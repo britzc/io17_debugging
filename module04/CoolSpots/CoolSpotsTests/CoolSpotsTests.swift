@@ -18,12 +18,9 @@ final class CoolSpotsTests: XCTestCase {
         var lastItem = spotData.next()
         for _ in 1...100 {
             let nextItem = spotData.next()
-            XCTAssertNotEqual(lastItem.ordinal,nextItem.ordinal, "cannot repeat the same image")
+            XCTAssertNotEqual(lastItem!.ordinal,nextItem!.ordinal, "cannot repeat the same image")
             
             lastItem = nextItem
         }
     }
-    
-
-    
 }

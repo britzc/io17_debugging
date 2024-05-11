@@ -7,7 +7,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E5BFC937-F000-41DF-B81A-1364ABFB0997"
+            uuid = "2B7AFA89-320A-435B-9F96-E691E3C1D8A8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -23,7 +23,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "30E604C7-562B-4352-A727-7EADC15BA604"
+            uuid = "0A5124CB-58E9-4DF8-BCCC-4A7DCEAAB22B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -33,22 +33,6 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "randomContent()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A2A31B71-F855-4B1D-84F6-92856A840429"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CoolSpots/Utility/SpotData.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "next()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

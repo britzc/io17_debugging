@@ -15,16 +15,11 @@ struct CardView: View {
     @State private var spotItem: Spot
     
     func randomContent() {
-        print("---- SELECTING NEW CONTENT ----")
-        
-        let username = "Pluralsight User"
-        Logger.viewCycle.info("Welcome \(username)")
-        
         let newItem = spotData.next()
-        spotItem = newItem
+        spotItem = newItem!
     }
     
-    var body: some View {
+    var body:  some View {
         ZStack {
             VStack {
                 VStack(alignment: .leading) {
@@ -39,13 +34,17 @@ struct CardView: View {
                 .padding(.horizontal,30)
                 
                 Image(spotItem.image)
-                        .resizable()
-                        .scaledToFit()
-                        .animation(
-                            .default,
-                            value:spotItem.ordinal)
+                    .resizable()
+                    .scaledToFit()
+                    .animation(
+                        .default,
+                        value:spotItem.ordinal)
                 
                 Text(spotItem.description)
+                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                    .italic()
+                
+                Text(spotItem.country!.name)
                     .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                     .italic()
                 
@@ -61,7 +60,7 @@ struct CardView: View {
     }
     
     init() {
-        self.spotItem = spotData.next()
+        self.spotItem = spotData.next()!
     }
 }
 
