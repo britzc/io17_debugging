@@ -3,11 +3,9 @@ import Foundation
 
 class Country {
     var name: String
-    var spot: Spot?
     
-    init(name:String,spot: Spot? = nil) {
+    init(name:String) {
         self.name = name
-        self.spot = spot
     }
 }
 
@@ -28,8 +26,8 @@ class Spot {
 class SpotData {
     private var currentOrdinal: Int
     
-    private var images = ["milfordsound", "sydneyharbourbridge", "grandcanyon", "machupicchu", "moremi", "eiffeltower"]
-    private var descriptions = ["Milford Sound", "Sydney Harbour Bridge", "Grand Canyon", "Machu Picchu", "Moremi", "Eiffel Tower"]
+    private var images = ["milfordsound", "sydneyharbourbridge", "grandcanyon", "machupicchu", "moremi", "eiffeltower", "nazare"]
+    private var descriptions = ["Milford Sound", "Sydney Harbour Bridge", "Grand Canyon", "Machu Picchu", "Moremi", "Eiffel Tower", "Nazare"]
     private var countries = ["New Zealand", "Australia", "America", "Peru", "Botswana", "France"]
     
     func next() -> Spot? {
@@ -43,8 +41,6 @@ class SpotData {
         let country: Country? = Country(name:countries[currentOrdinal])
         
         let spot: Spot? = Spot(ordinal:currentOrdinal + 1,image:images[currentOrdinal],description:descriptions[currentOrdinal],country: country)
-        
-        country?.spot = spot
         
         return spot
     }

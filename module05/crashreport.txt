@@ -1,0 +1,172 @@
+Incident Identifier: A322365A-EA00-4024-83F7-6864E80A5EFB
+CrashReporter Key:   51C0FF1F-44CB-31DC-5D89-976E96F9F892
+Hardware Model:      MacBookPro18,3
+Process:             CoolSpots [9156]
+Path:                /Users/USER/Library/Developer/CoreSimulator/Devices/B83D1738-5BBE-44D6-B3B6-8404348000A4/data/Containers/Bundle/Application/7557F2B6-3C7D-463F-9580-1D5A4E843607/CoolSpots.app/CoolSpots
+Identifier:          com.corneilebritz.CoolSpots
+Version:             1.0 (1)
+Code Type:           ARM-64 (Native)
+Role:                Foreground
+Parent Process:      launchd_sim [8854]
+Coalition:           com.apple.CoreSimulator.SimDevice.B83D1738-5BBE-44D6-B3B6-8404348000A4 [3165]
+Responsible Process: SimulatorTrampoline [945]
+
+Date/Time:           2024-05-17 11:02:05.1644 +1200
+Launch Time:         2024-05-17 11:01:40.6496 +1200
+OS Version:          macOS 14.5 (23F79)
+Release Type:        User
+Report Version:      104
+
+Exception Type:  EXC_BREAKPOINT (SIGTRAP)
+Exception Codes: 0x0000000000000001, 0x0000000192ffed38
+Termination Reason: SIGNAL 5 Trace/BPT trap: 5
+Terminating Process: exc handler [9156]
+
+Triggered by Thread:  0
+
+Thread 0 Crashed::  Dispatch queue: com.apple.main-thread
+0   libswiftCore.dylib            	       0x192ffed38 closure #1 in closure #1 in closure #1 in _assertionFailure(_:_:file:line:flags:) + 224
+1   libswiftCore.dylib            	       0x192ffeb28 closure #1 in closure #1 in _assertionFailure(_:_:file:line:flags:) + 196
+2   libswiftCore.dylib            	       0x192ffea20 closure #1 in _assertionFailure(_:_:file:line:flags:) + 328
+3   libswiftCore.dylib            	       0x192ffe620 _assertionFailure(_:_:file:line:flags:) + 168
+4   libswiftCore.dylib            	       0x192fe3020 Array._checkSubscript(_:wasNativeTypeChecked:) + 152
+5   libswiftCore.dylib            	       0x192fe3790 Array.subscript.getter + 84
+6   CoolSpots                     	       0x100fab04c SpotData.next() + 740 (SpotData.swift:41)
+7   CoolSpots                     	       0x100fac6c0 CardView.randomContent() + 136 (CardView.swift:18)
+8   CoolSpots                     	       0x100fae27c closure #2 in closure #1 in closure #1 in CardView.body.getter + 64 (CardView.swift:52)
+9   SwiftUI                       	       0x1cd6068ac 0x1cc187000 + 21493932
+10  SwiftUI                       	       0x1ccd34cbc 0x1cc187000 + 12246204
+11  SwiftUI                       	       0x1ccd397b0 0x1cc187000 + 12265392
+12  SwiftUI                       	       0x1ccd37cb0 0x1cc187000 + 12258480
+13  SwiftUI                       	       0x1ccd37c04 0x1cc187000 + 12258308
+14  SwiftUI                       	       0x1cd303938 0x1cc187000 + 18336056
+15  SwiftUI                       	       0x1cd302e2c 0x1cc187000 + 18333228
+16  SwiftUI                       	       0x1cd30294c 0x1cc187000 + 18331980
+17  SwiftUI                       	       0x1ccf0b1a8 0x1cc187000 + 14172584
+18  SwiftUI                       	       0x1ccf0b1c4 0x1cc187000 + 14172612
+19  SwiftUI                       	       0x1ccf0b1a8 0x1cc187000 + 14172584
+20  SwiftUI                       	       0x1cd5f4ba0 0x1cc187000 + 21420960
+21  SwiftUI                       	       0x1cd5f4ea0 0x1cc187000 + 21421728
+22  SwiftUI                       	       0x1cd74d05c 0x1cc187000 + 22831196
+23  SwiftUI                       	       0x1cd54db0c 0x1cc187000 + 20736780
+24  SwiftUI                       	       0x1cd54c284 0x1cc187000 + 20730500
+25  SwiftUI                       	       0x1cd54c3b8 0x1cc187000 + 20730808
+26  UIKitCore                     	       0x184f15b90 -[UIGestureRecognizer _componentsEnded:withEvent:] + 140
+27  UIKitCore                     	       0x1854556c4 -[UITouchesEvent _sendEventToGestureRecognizer:] + 556
+28  UIKitCore                     	       0x184f09c6c -[UIGestureEnvironment _deliverEvent:toGestureRecognizers:usingBlock:] + 160
+29  UIKitCore                     	       0x184f09a5c -[UIGestureEnvironment _updateForEvent:window:] + 156
+30  UIKitCore                     	       0x18540a868 -[UIWindow sendEvent:] + 3088
+31  UIKitCore                     	       0x1853ea238 -[UIApplication sendEvent:] + 580
+32  UIKitCore                     	       0x18546dff4 __dispatchPreprocessedEventFromEventQueue + 1684
+33  UIKitCore                     	       0x185470e90 __processEventQueue + 5604
+34  UIKitCore                     	       0x1854697f0 __eventFetcherSourceCallback + 160
+35  CoreFoundation                	       0x18040ee48 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 24
+36  CoreFoundation                	       0x18040ed90 __CFRunLoopDoSource0 + 172
+37  CoreFoundation                	       0x18040e500 __CFRunLoopDoSources0 + 232
+38  CoreFoundation                	       0x180408be8 __CFRunLoopRun + 768
+39  CoreFoundation                	       0x1804084d4 CFRunLoopRunSpecific + 572
+40  GraphicsServices              	       0x18ef2aae4 GSEventRunModal + 160
+41  UIKitCore                     	       0x1853d0a28 -[UIApplication _run] + 868
+42  UIKitCore                     	       0x1853d46b0 UIApplicationMain + 124
+43  SwiftUI                       	       0x1ccf100e4 0x1cc187000 + 14192868
+44  SwiftUI                       	       0x1ccf0ff8c 0x1cc187000 + 14192524
+45  SwiftUI                       	       0x1ccbcd6d8 0x1cc187000 + 10774232
+46  CoolSpots                     	       0x100fb0a10 static CoolSpotsApp.$main() + 40
+47  CoolSpots                     	       0x100fb0ac0 main + 12 (CoolSpotsApp.swift:5)
+48  dyld_sim                      	       0x101039544 start_sim + 20
+49  dyld                          	       0x1011260e0 start + 2360
+
+Thread 1:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 2:: com.apple.uikit.eventfetch-thread
+0   libsystem_kernel.dylib        	       0x101e61570 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x101e72b80 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x101e69798 mach_msg_overwrite + 532
+3   libsystem_kernel.dylib        	       0x101e618e8 mach_msg + 20
+4   CoreFoundation                	       0x18040e684 __CFRunLoopServiceMachPort + 156
+5   CoreFoundation                	       0x180408d64 __CFRunLoopRun + 1148
+6   CoreFoundation                	       0x1804084d4 CFRunLoopRunSpecific + 572
+7   Foundation                    	       0x180dd340c -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 208
+8   Foundation                    	       0x180dd3630 -[NSRunLoop(NSRunLoop) runUntilDate:] + 60
+9   UIKitCore                     	       0x1854773f8 -[UIEventFetcher threadMain] + 404
+10  Foundation                    	       0x180df9c64 __NSThread__start__ + 720
+11  libsystem_pthread.dylib       	       0x1020e3414 _pthread_start + 104
+12  libsystem_pthread.dylib       	       0x1020de5e0 thread_start + 8
+
+Thread 3:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 4:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 5:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 6:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 7:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 8:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 9:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 10:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 11:
+0   libsystem_pthread.dylib       	       0x1020de5cc start_wqthread + 0
+
+Thread 12:: com.apple.SwiftUI.AsyncRenderer
+0   libsystem_kernel.dylib        	       0x101e61570 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x101e72b80 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x101e69798 mach_msg_overwrite + 532
+3   libsystem_kernel.dylib        	       0x101e618e8 mach_msg + 20
+4   CoreFoundation                	       0x18040e684 __CFRunLoopServiceMachPort + 156
+5   CoreFoundation                	       0x180408d64 __CFRunLoopRun + 1148
+6   CoreFoundation                	       0x1804084d4 CFRunLoopRunSpecific + 572
+7   Foundation                    	       0x180dd340c -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 208
+8   Foundation                    	       0x180dd35e0 -[NSRunLoop(NSRunLoop) run] + 60
+9   SwiftUI                       	       0x1cc736858 0x1cc187000 + 5961816
+10  SwiftUI                       	       0x1cc736930 0x1cc187000 + 5962032
+11  Foundation                    	       0x180df9c64 __NSThread__start__ + 720
+12  libsystem_pthread.dylib       	       0x1020e3414 _pthread_start + 104
+13  libsystem_pthread.dylib       	       0x1020de5e0 thread_start + 8
+
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x0000600000284910   x1: 0x0000000000000000   x2: 0x0000000000000000   x3: 0x0000600000284920
+    x4: 0x0000000000000000   x5: 0x000000016ee52640   x6: 0x0000000000000065   x7: 0x0000000000000000
+    x8: 0x0000000000000200   x9: 0x00000000000001ff  x10: 0x0000000000000900  x11: 0x00000000b78f7842
+   x12: 0x00000000000007fb  x13: 0x00000000000007fd  x14: 0x00000000b7af8049  x15: 0x0000000000000049
+   x16: 0x00000000b78f7842  x17: 0x00000000000f8000  x18: 0x0000000000000000  x19: 0x0000000000000006
+   x20: 0x0000600002c03100  x21: 0x0000000000000006  x22: 0x0000600002c03100  x23: 0x00000000ffffffff
+   x24: 0x0000000000000000  x25: 0x0000000000000001  x26: 0x0000600000c6e938  x27: 0x0000600000c6e910
+   x28: 0x0000600000284120   fp: 0x000000016ee526f0   lr: 0x0000000192ffed38
+    sp: 0x000000016ee526d0   pc: 0x0000000192ffed38 cpsr: 0x60001000
+   far: 0x0000000000000000  esr: 0xf2000001 (Breakpoint) brk 1
+
+Binary Images:
+       0x101120000 -        0x1011abfff dyld (*) <37bbc384-0755-31c7-a808-0ed49e44dd8e> /usr/lib/dyld
+       0x1013d0000 -        0x1013dbfff libobjc-trampolines.dylib (*) <c6ef2cc0-8ca9-3a69-a525-91bec719ddfc> /Volumes/VOLUME/*/libobjc-trampolines.dylib
+       0x102180000 -        0x1021cbfff libdispatch.dylib (*) <feef03d8-9042-3615-97a9-4cbe771e7191> /Volumes/VOLUME/*/libdispatch.dylib
+       0x101e18000 -        0x101e1ffff libsystem_platform.dylib (*) <b7159952-fab4-38ce-a131-446d54c54afc> /usr/lib/system/libsystem_platform.dylib
+       0x101e60000 -        0x101e9bfff libsystem_kernel.dylib (*) <0c657561-0a7d-344e-838f-109a718679cf> /usr/lib/system/libsystem_kernel.dylib
+       0x1020dc000 -        0x1020ebfff libsystem_pthread.dylib (*) <f0346f94-d1b1-311f-9ac1-aa8107c597ad> /usr/lib/system/libsystem_pthread.dylib
+       0x102260000 -        0x1022effff libRPAC.dylib (*) <b079f950-c1ff-3778-ac18-97d82d8c7640> /Volumes/VOLUME/*/libRPAC.dylib
+       0x101ef0000 -        0x101f33fff libMainThreadChecker.dylib (*) <2b3c0442-5f65-3444-a917-51db42c1a7a4> /Volumes/VOLUME/*/libMainThreadChecker.dylib
+       0x101e48000 -        0x101e4ffff libBacktraceRecording.dylib (*) <53f8b9e2-e8a1-32b2-a155-0ba951d21277> /Volumes/VOLUME/*/libBacktraceRecording.dylib
+       0x10110c000 -        0x10110ffff libLogRedirect.dylib (*) <5dd9e422-30f4-3936-9a93-8ba39bbdfc83> /Volumes/VOLUME/*/libLogRedirect.dylib
+       0x100fa8000 -        0x100fb7fff com.corneilebritz.CoolSpots (1.0) <f435c911-281c-3e2d-b4c4-a099d0a129f6> /Users/USER/Library/Developer/CoreSimulator/Devices/B83D1738-5BBE-44D6-B3B6-8404348000A4/data/Containers/Bundle/Application/7557F2B6-3C7D-463F-9580-1D5A4E843607/CoolSpots.app/CoolSpots
+       0x101038000 -        0x101083fff dyld_sim (*) <f1d509a4-edf1-3668-b217-c6a2bd1fbef4> /Volumes/VOLUME/*/dyld_sim
+       0x192fce000 -        0x19342ffff libswiftCore.dylib (*) <64d097c3-5862-3a0c-8bc1-1fb58b763e35> /Volumes/VOLUME/*/libswiftCore.dylib
+       0x1cc187000 -        0x1cdab4fff com.apple.SwiftUI (5.5.8) <90e5755e-4350-3954-aac2-14e5243657a0> /Volumes/VOLUME/*/SwiftUI.framework/SwiftUI
+       0x1847df000 -        0x186186fff com.apple.UIKitCore (1.0) <8d3f22bc-9dec-3601-b822-2b88624be742> /Volumes/VOLUME/*/UIKitCore.framework/UIKitCore
+       0x180381000 -        0x180734fff com.apple.CoreFoundation (6.9) <6c40f9e5-bffa-3413-9e1c-a4f724ad56ba> /Volumes/VOLUME/*/CoreFoundation.framework/CoreFoundation
+       0x18ef27000 -        0x18ef2ffff com.apple.GraphicsServices (1.0) <b8bade4e-4da1-3e89-aadc-79d9356e07f1> /Volumes/VOLUME/*/GraphicsServices.framework/GraphicsServices
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+       0x1807b4000 -        0x181264fff com.apple.Foundation (6.9) <3a54db51-8b3a-308d-9f9e-51474c4a8520> /Volumes/VOLUME/*/Foundation.framework/Foundation
