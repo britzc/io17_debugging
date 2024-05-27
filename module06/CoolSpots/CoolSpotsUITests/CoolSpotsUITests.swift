@@ -7,7 +7,6 @@ final class CoolSpotsUITests: XCTestCase {
     }
     
     func testButtonsVisible() throws {
-        
         let app = XCUIApplication()
         app.launch()
         
