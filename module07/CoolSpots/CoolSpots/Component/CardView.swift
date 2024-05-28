@@ -24,7 +24,7 @@ struct CardView: View {
         let url = URL(string: "http://localhost:8080/fast")!
         
         do {
-            let response = try Data(contentsOf:url)
+            let _ = try Data(contentsOf:url)
             print("Data retrieval passed")
         } catch {
             print("Data retrieval failed")
